@@ -27,6 +27,7 @@ use QL\QueryList;
 
 
 
+
 // // 用法二
 // $ql = QueryList::run('Request',[
 //     'target' => '采集的目标页面',
@@ -35,12 +36,7 @@ use QL\QueryList;
 //     'params' => ['提交的参数'=>'参数值','key'=>'value'],
 //     //等等其它http相关参数，具体可查看Http类源码
 // ]);
-
 // $data = $ql->setQuery(...)->data;
-
-
-
-
 
 //返回值为设置好了html属性的QueryList对象，然后应该调用QueryList的setQuery方法设置采集规则。
 
