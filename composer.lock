@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a504fdaf2e84e5425c64962d2795cde",
+    "content-hash": "e04e051150111d3d00ac75eca7373c2f",
     "packages": [
         {
             "name": "jaeger/curlmulti",
@@ -195,6 +195,79 @@
             ],
             "description": "QueryList扩展，AQuery扩展基类",
             "time": "2016-01-06T07:51:20+00:00"
+        },
+        {
+            "name": "jaeger/querylist-ext-dimage",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jae-jae/QueryList-Ext-DImage.git",
+                "reference": "620fa53e7c255860793d7897de7a5b7c7b8d674f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jae-jae/QueryList-Ext-DImage/zipball/620fa53e7c255860793d7897de7a5b7c7b8d674f",
+                "reference": "620fa53e7c255860793d7897de7a5b7c7b8d674f",
+                "shasum": ""
+            },
+            "require": {
+                "jaeger/http": "^1.0",
+                "jaeger/querylist-ext-aquery": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "QL\\Ext\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jaeger",
+                    "email": "hj.q@qq.com"
+                }
+            ],
+            "description": "QueryList扩展，DImage图片下载扩展",
+            "time": "2016-07-08T16:45:39+00:00"
+        },
+        {
+            "name": "jaeger/querylist-ext-login",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jae-jae/QueryList-Ext-Login.git",
+                "reference": "4e1279ead32eea96b45f5cec64a9646573f646ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jae-jae/QueryList-Ext-Login/zipball/4e1279ead32eea96b45f5cec64a9646573f646ce",
+                "reference": "4e1279ead32eea96b45f5cec64a9646573f646ce",
+                "shasum": ""
+            },
+            "require": {
+                "jaeger/querylist-ext-request": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "QL\\Ext\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jaeger",
+                    "email": "hj.q@qq.com"
+                }
+            ],
+            "description": "QueryList扩展，Login模拟登陆扩展",
+            "time": "2015-12-28T06:42:48+00:00"
         },
         {
             "name": "jaeger/querylist-ext-multi",

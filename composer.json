@@ -3,6 +3,8 @@
         "jaeger/querylist": "V3.2.1",
         "jaeger/querylist-ext-multi": "^1.0",
         "jaeger/querylist-ext-aquery": "^1.0",
-        "jaeger/querylist-ext-request": "^1.0"
+        "jaeger/querylist-ext-request": "^1.0",
+        "jaeger/querylist-ext-login": "^1.0",
+        "jaeger/querylist-ext-dimage": "^1.1"
     }
 }

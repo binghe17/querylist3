@@ -24,8 +24,10 @@ class ComposerStaticInite624c04448fd32c22e4693232e2faa52
         'QL\\Ext\\' => 
         array (
             0 => __DIR__ . '/..' . '/jaeger/querylist-ext-aquery',
-            1 => __DIR__ . '/..' . '/jaeger/querylist-ext-multi',
-            2 => __DIR__ . '/..' . '/jaeger/querylist-ext-request',
+            1 => __DIR__ . '/..' . '/jaeger/querylist-ext-dimage',
+            2 => __DIR__ . '/..' . '/jaeger/querylist-ext-login',
+            3 => __DIR__ . '/..' . '/jaeger/querylist-ext-multi',
+            4 => __DIR__ . '/..' . '/jaeger/querylist-ext-request',
         ),
         'QL\\' => 
         array (

@@ -436,7 +436,35 @@ STR;
 
 
 
+//======================对于更复杂的http网络操作
+// QueryList本身内置的网络操作非常简单，QueryList关注于DOM选择;对于更复杂的网络操作可以选择使用Request扩展，它可以简单的实现：携带cookie、伪造来路、伪造浏览器等功能，但如果觉的它依旧不能满足你的需求，下面有几个可以参考的方案:
 
+// 1.自己用curl封装一个http请求
+function getHtml($url)
+{
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+            curl_setopt($ch, CURLOPT_AUTOREFERER, true);
+            curl_setopt($ch, CURLOPT_REFERER, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            $result = curl_exec($ch);
+            curl_close($ch);
+            return $result;
+}
+$rules = array(
+//采集规则
+);
+//获取页面源码
+$html = getHtml('http://xxx.com');
+//采集
+$data = QueryList::Query($html,$rules)->data;
+
+
+
+//---------------
+// 2.使用第三方http包
+// QueryList可以无缝与任意第三放http包配合使用,下面以guzzlehttp/guzzle包为例,Guzzle是一个PHP的HTTP客户端，用来轻而易举地发送请求，并集成到我们的WEB服务上。
 
 
 

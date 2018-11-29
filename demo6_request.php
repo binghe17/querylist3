@@ -1,11 +1,12 @@
 <?php 
-
+//Request 网络操作扩展    https://querylist.cc/docs/guide/v3/Request
 require 'vendor/autoload.php'; 
-
 use QL\QueryList;
 
+echo '<pre>';
 
 
+//-------------------
 // // 用法一
 // $ql = QueryList::run('Request',[
 //     'http' => [
@@ -27,7 +28,7 @@ use QL\QueryList;
 
 
 
-
+//--------------------
 // // 用法二
 // $ql = QueryList::run('Request',[
 //     'target' => '采集的目标页面',
