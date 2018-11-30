@@ -81,7 +81,7 @@ $cm = QueryList::run('Multi',[
             'class' => array('','class'),
             'mallPid' => array('','data-mall-pid'), //shopId
             // 'shopCno' => array('.mall_txt>.btn_detail','data-cno'),
-            'shopSeq' => array('.mall_txt>.btn_detail','data-mall-seq'),
+            // 'shopSeq' => array('.mall_txt>.btn_detail','data-mall-seq'),
             'mallSeq' => array('','data-mall-seq'),
             'isAD' => array('','data-is-ad'),
 
@@ -109,11 +109,11 @@ $cm = QueryList::run('Multi',[
         $data = $ql->getData();
         $i = 1;
         foreach ($data as $k => $v) {
-            if( $v['isAD'] == 'true' ){
+            if( $v['isAD'] == 'true' ){ //광고 상품일때 삭제
                 unset($data[$k]);
                 continue;
             }
-            unset($data[$k]['isAd']);
+            unset($data[$k]['isAD']);
             if(empty($v['isShop'])) $data[$k]['isShop'] = 'false';
             if(empty($v['brandName'])) $data[$k]['brandName'] = $v['brandName_tmp'];
             unset($data[$k]['brandName_tmp']);
@@ -134,6 +134,7 @@ $cm = QueryList::run('Multi',[
 
         //어느페이지에서 데이터 추출했는지 기록
         parse_str(parse_url($html['info']['url'], PHP_URL_QUERY), $pageInfo);
+        $pageInfo['date'] = date('Y-m-d H:i:s');
         $pageInfo['length'] = count($data);
         $pageInfo['datas'] = $data;
         $GLOBALS['data'][$pageInfo['pagingIndex']] = $pageInfo; 
@@ -151,7 +152,8 @@ $cm = QueryList::run('Multi',[
 
 
 echo '--------';
-print_r($data);
+// print_r($data);
+print_r(json_encode($data));//save data
 
 
 
